@@ -1,16 +1,18 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, ImageBackground } from 'react-native';
+import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, ImageBackground, StyleSheet } from 'react-native';
 import seta from '../../../assets/Screens/Arrow.png';
 import Bg from '../../../assets/Screens/Start-Screen.png';
-import estilos, { cores } from './estilos';
+import setaVerde from '../../../assets/Icons/SetaVerde.png';
 
-const StartScreen = () => {
+const StartScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={estilos.container}>
-            <StatusBar backgroundColor={cores.verde} />
-            <Image source={Bg} style={estilos.backgroundStyle}/>
+            <StatusBar backgroundColor={'#90BE6D'} />
+            <Image source={Bg} style={estilos.backgroundStyle} />
             <View style={estilos.containerBotao}>
-                <TouchableOpacity style={estilos.botao}>
+                <TouchableOpacity style={estilos.botao}
+                    onPress={() =>  navigation.navigate('Home')}
+                >
                     <Text style={estilos.textoBotao}>Continuar</Text>
                     <Image source={seta} style={estilos.setaStyle} />
                 </TouchableOpacity>
@@ -21,3 +23,38 @@ const StartScreen = () => {
 }
 
 export default StartScreen;
+
+const estilos = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#90BE6D',
+    },
+    containerBotao: {
+        zIndex: 1,
+        alignItems: 'center',
+    },
+    botao: {
+        backgroundColor: '#073B4C',
+        borderRadius: 25,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        flexDirection: 'row',
+        marginTop: 500,
+    },
+    textoBotao: {
+        color: '#90BE6D',
+        textAlign: 'center',
+        lineHeight: 26,
+        fontSize: 20,
+    },
+    setaStyle: {
+        width: 20,
+        height: 10,
+        margin: 10,
+    },
+    backgroundStyle: {
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+    }
+})
