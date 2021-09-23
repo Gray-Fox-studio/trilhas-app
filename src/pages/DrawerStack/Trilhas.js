@@ -4,13 +4,18 @@ import Bg from '../../../assets/Screens/Background.png';
 import setaVerde from '../../../assets/Icons/SetaVerde.png';
 import botanica from '../../../assets/images/Botanica.png';
 import planet from '../../../assets/Icons/Planet.png';
+import drawerButton from '../../../assets/Icons/DrawerButton.png';
 
 const Trilhas = ({ navigation }) => {
     return (
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
-
+            <View style={estilos.containerDrawer}>
+                <TouchableOpacity style={estilos.containerBotaoDrawer}>
+                    <Image source={drawerButton} style={estilos.drawerStyle} />
+                </TouchableOpacity>
+            </View>
             <View style={estilos.containerPlaneta}>
                 <Image source={planet} style={estilos.planetaStyle} />
             </View>
@@ -56,6 +61,10 @@ const estilos = StyleSheet.create({
         zIndex: 1,
         alignItems: 'center',
         marginTop: 100,
+    },
+    containerDrawer: {
+        position: 'absolute',
+        zIndex: 1,
     },
     containerEmbreve: {
         alignItems: 'center',
@@ -106,6 +115,10 @@ const estilos = StyleSheet.create({
         height: 10,
         margin: 10,
     },
+    drawerStyle: {
+        width: 40,
+        height: 30,
+    },
     seta: {
         width: 20,
         height: 20,
@@ -129,4 +142,8 @@ const estilos = StyleSheet.create({
         width: 200,
         height: 200,
     },
+    containerBotaoDrawer :{
+        marginTop: 30,
+        marginLeft: 20,
+    }
 })
