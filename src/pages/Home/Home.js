@@ -1,5 +1,6 @@
+//Falta Ajustar
 import React from 'react';
-import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, ImageBackground, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleSheet } from 'react-native';
 import Bg from '../../../assets/Screens/homeBg.png';
 import botanica from '../../../assets/images/Botanica.png';
 import setaVerde from '../../../assets/Icons/SetaVerde.png';
@@ -15,6 +16,7 @@ const StartScreen = () => {
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
+
             <View style={estilos.containerBotao}>
                 <TouchableOpacity style={estilos.botao}>
                     <View style={estilos.row}>
@@ -27,6 +29,7 @@ const StartScreen = () => {
             <View style={estilos.containerImage}>
                 <Image source={polygon} style={estilos.polygon} />
             </View>
+
             <View style={estilos.containerBotaoP}>
                 <TouchableOpacity style={estilos.botaoP}>
                     <View style={estilos.row}>
@@ -38,6 +41,7 @@ const StartScreen = () => {
             <View style={estilos.containerImage1}>
                 <Image source={polygon} style={estilos.polygon1} />
             </View>
+
             <View style={estilos.containerInst}>
                 <TouchableOpacity style={estilos.botaoInst}>
                     <View style={estilos.row}>
@@ -49,6 +53,7 @@ const StartScreen = () => {
             <View style={estilos.containerImageInst}>
                 <Image source={polygon2} style={estilos.polygon2} />
             </View>
+
             <View style={estilos.containerGame}>
                 <TouchableOpacity style={estilos.botaoGame}>
                     <View style={estilos.row}>
@@ -61,6 +66,7 @@ const StartScreen = () => {
             <View style={estilos.containerImageGame}>
                 <Image source={polygon3} style={estilos.polygon3} />
             </View>
+
         </SafeAreaView>
     );
 }

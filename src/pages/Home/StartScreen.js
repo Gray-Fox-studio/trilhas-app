@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, ImageBackground, StyleSheet } from 'react-native';
+import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleSheet } from 'react-native';
 import seta from '../../../assets/Screens/Arrow.png';
 import Bg from '../../../assets/Screens/Start-Screen.png';
-import setaVerde from '../../../assets/Icons/SetaVerde.png';
+
 
 const StartScreen = ({ navigation }) => {
     return (
@@ -11,7 +11,7 @@ const StartScreen = ({ navigation }) => {
             <Image source={Bg} style={estilos.backgroundStyle} />
             <View style={estilos.containerBotao}>
                 <TouchableOpacity style={estilos.botao}
-                    onPress={() =>  navigation.navigate('Home')}
+                    onPress={() =>  navigation.navigate('Temp')}
                 >
                     <Text style={estilos.textoBotao}>Continuar</Text>
                     <Image source={seta} style={estilos.setaStyle} />
