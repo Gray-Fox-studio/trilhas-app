@@ -5,6 +5,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Temp  from '../pages/Home/Temp';
 import DrawerStack from '../pages/DrawerStack/DrawerStack';
+import Sobre from '../pages/DrawerStack/HomePages/Sobre';
+import Instituicao from '../pages/DrawerStack/HomePages/Instituicao';
+import Quiz from '../pages/DrawerStack/HomePages/Quiz';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,7 +28,19 @@ export default function HomeStack() {
           headerShown: false
         }
         } />
-        <Stack.Screen name="Trilhas" component={DrawerStack} options={{
+        <Stack.Screen name="Sobre" component={Sobre} options={{
+          headerShown: false
+        }
+        } />
+        <Stack.Screen name="Instituição" component={Instituicao} options={{
+          headerShown: false
+        }
+        } />
+        <Stack.Screen name="Quiz" component={Quiz} options={{
+          headerShown: false
+        }
+        } />
+        <Stack.Screen name="Drawer" component={DrawerStack} options={{
           headerShown: false
         }
         } />

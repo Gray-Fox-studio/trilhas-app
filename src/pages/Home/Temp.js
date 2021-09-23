@@ -3,15 +3,16 @@ import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleShee
 import Bg from '../../../assets/Screens/Background.png';
 import botanica from '../../../assets/images/Botanica.png';
 import setaVerde from '../../../assets/Icons/SetaVerde.png';
-import polygon from '../../../assets/Icons/Polygon.png';
 import info from '../../../assets/Icons/info.png';
 import inst from '../../../assets/Icons/Inst.png';
-import polygon2 from '../../../assets/Icons/Polygon2.png';
 import game from '../../../assets/Icons/Game.png';
-import polygon3 from '../../../assets/Icons/Polygon3.png';
 import logo from '../../../assets/Icons/Logo.png';
 import quit from '../../../assets/Icons/Quit.png';
-
+/*Setas do balão
+import polygon from '../../../assets/Icons/Polygon.png';
+import polygon2 from '../../../assets/Icons/Polygon2.png';
+import polygon3 from '../../../assets/Icons/Polygon3.png';
+*/
 
 const StartScreen = ({ navigation }) => {
     return (
@@ -21,7 +22,7 @@ const StartScreen = ({ navigation }) => {
 
             <View style={estilos.containerBotao}>
                 <TouchableOpacity style={estilos.botao}
-                  onPress={() =>  navigation.navigate('Trilhas')}
+                    onPress={() => navigation.navigate('Drawer')}
                 >
                     <View style={estilos.row}>
                         <Image source={setaVerde} style={estilos.seta} />
@@ -36,7 +37,9 @@ const StartScreen = ({ navigation }) => {
             </View>
 
             <View style={estilos.containerBotaoSobre}>
-                <TouchableOpacity style={estilos.botaoSobre}>
+                <TouchableOpacity style={estilos.botaoSobre}
+                    onPress={() => navigation.navigate('Sobre')}
+                >
                     <View style={estilos.row}>
                         <Image source={info} style={estilos.seta} />
                         <Text style={estilos.textoBotao1}>Sobre</Text>
@@ -46,7 +49,9 @@ const StartScreen = ({ navigation }) => {
 
 
             <View style={estilos.containerBotaoInst}>
-                <TouchableOpacity style={estilos.botaoInst}>
+                <TouchableOpacity style={estilos.botaoInst}
+                    onPress={() => navigation.navigate('Instituição')}
+                >
                     <View style={estilos.row}>
                         <Image source={inst} style={estilos.setaInst} />
                         <Text style={estilos.textoBotao1}>instituição</Text>
@@ -55,7 +60,9 @@ const StartScreen = ({ navigation }) => {
             </View >
 
             <View style={estilos.containerBotaoQuiz}>
-                <TouchableOpacity style={estilos.botaoQuiz}>
+                <TouchableOpacity style={estilos.botaoQuiz}
+                    onPress={() => navigation.navigate('Quiz')}
+                >
                     <View style={estilos.row}>
                         <Image source={game} style={estilos.gameSeta} />
                         <Text style={estilos.textoBotao}>Quis</Text>
@@ -65,7 +72,7 @@ const StartScreen = ({ navigation }) => {
             </View >
             <View style={estilos.containerQuit}>
                 <TouchableOpacity style={estilos.quitBorder}
-                 onPress={() =>  navigation.navigate('StartScreen')}
+                    onPress={() => navigation.navigate('StartScreen')}
                 >
                     <Image source={quit} style={estilos.quitStyle} />
                 </TouchableOpacity>

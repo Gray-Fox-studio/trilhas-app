@@ -1,6 +1,6 @@
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Trilhas from "../pages/DrawerStack/Trilhas";
+import Trilhas from '../pages/DrawerStack/HomePages/Trilhas';
 
 const Drawer = createDrawerNavigator();
 

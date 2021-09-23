@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleSheet } from 'react-native';
-import Bg from '../../../assets/Screens/Background.png';
-import setaVerde from '../../../assets/Icons/SetaVerde.png';
-import botanica from '../../../assets/images/Botanica.png';
-import planet from '../../../assets/Icons/Planet.png';
-import drawerButton from '../../../assets/Icons/DrawerButton.png';
+import Bg from '../../../../assets/Screens/Background.png';
+import setaVerde from '../../../../assets/Icons/SetaVerde.png';
+import botanica from '../../../../assets/images/Botanica.png';
+import planet from '../../../../assets/Icons/Planet.png';
+import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 
 const Trilhas = ({ navigation }) => {
     return (
