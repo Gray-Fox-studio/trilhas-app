@@ -21,7 +21,9 @@ const Trilhas = ({ navigation }) => {
             </View>
 
             <View style={estilos.containerBotao}>
-                <TouchableOpacity style={estilos.botao}>
+                <TouchableOpacity style={estilos.botao}
+                    onPress={() => navigation.navigate('JardimBotanico')}
+                >
                     <View style={estilos.row}>
                         <Image source={setaVerde} style={estilos.seta} />
                         <Text style={estilos.textoBotao}>Jardim botânico</Text>
@@ -31,12 +33,14 @@ const Trilhas = ({ navigation }) => {
             </View >
 
             <View style={estilos.containerEmbreve}>
+                
                 <TouchableOpacity style={estilos.botaoEmbreve}>
-                    <Text style={estilos.textoBotaoEmbreve}>Em breve...</Text>
+                    <Text style={estilos.textoBotaoEmbreve}>Em breve</Text>
                     <View style={estilos.botaoFake}>
 
                     </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity style={estilos.botaoEmbreve}>
                     <Text style={estilos.textoBotaoEmbreve}>Em breve...</Text>
                     <View style={estilos.botaoFake}>
@@ -44,6 +48,7 @@ const Trilhas = ({ navigation }) => {
                     </View>
                 </TouchableOpacity>
             </View>
+            
 
         </SafeAreaView>
 
@@ -71,7 +76,7 @@ const estilos = StyleSheet.create({
         justifyContent: 'space-around',
         flexDirection: 'row',
         marginTop: 20,
-        margin: 55,
+        marginHorizontal: 50,
     },
     containerPlaneta: {
         alignItems: 'flex-start',
@@ -142,7 +147,7 @@ const estilos = StyleSheet.create({
         width: 200,
         height: 200,
     },
-    containerBotaoDrawer :{
+    containerBotaoDrawer: {
         marginTop: 30,
         marginLeft: 20,
     }

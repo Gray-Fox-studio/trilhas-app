@@ -8,6 +8,7 @@ import DrawerStack from '../pages/DrawerStack/DrawerStack';
 import Sobre from '../pages/DrawerStack/HomePages/Sobre';
 import Instituicao from '../pages/DrawerStack/HomePages/Instituicao';
 import Quiz from '../pages/DrawerStack/HomePages/Quiz';
+import JardimBotanico from '../pages/DrawerStack/HomePages/TabStack/TrilhasPages/JardimBotanico'
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,10 @@ export default function HomeStack() {
         }
         } />
         <Stack.Screen name="Quiz" component={Quiz} options={{
+          headerShown: false
+        }
+        } />
+        <Stack.Screen name="JardimBotanico" component={JardimBotanico} options={{
           headerShown: false
         }
         } />
