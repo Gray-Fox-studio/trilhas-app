@@ -9,7 +9,7 @@ import SetaVerde from '../../../../../../assets/Icons/SetaVerde.png';
 import Game from '../../../../../../assets/Icons/Game.png';
 import Info from '../../../../../../assets/Icons/Interroga.png';
 
-const Quiz = ({ navigation }) => {
+const JardimBotanico = ({ navigation }) => {
     return (
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
@@ -37,12 +37,14 @@ const Quiz = ({ navigation }) => {
 
             <View style={estilos.containerBotao}>
 
-                <TouchableOpacity style={estilos.botao}>
+                <TouchableOpacity style={estilos.botao}
+                    onPress={() => navigation.navigate('Tabs')}
+                >
 
                     <Image source={MapInfo} style={estilos.iconStyle} />
                     <Text style={estilos.textbotao}>{`Sobre o 
 jardin`}
-                    </Text> 
+                    </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={estilos.botao}>
@@ -76,7 +78,7 @@ mos aqui!`}
     );
 }
 
-export default Quiz;
+export default JardimBotanico;
 
 const estilos = StyleSheet.create({
     container: {
