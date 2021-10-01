@@ -5,12 +5,21 @@ import setaVerde from '../../../../assets/Icons/SetaVerde.png';
 import botanica from '../../../../assets/images/Botanica.png';
 import planet from '../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../assets/Icons/DrawerButton.png';
+import ArrowL from '../../../../assets/Screens/ArrowL.png'
 
 const Trilhas = ({ navigation }) => {
     return (
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
+
+            <TouchableOpacity style={estilos.containerTitulo}
+                onPress={() => navigation.navigate('Temp')}
+            >
+                <Image source={ArrowL} style={estilos.arrowLeft} />
+                <Text style={estilos.textoBotao}>Trilhas</Text>
+            </TouchableOpacity>
+
             <View style={estilos.containerDrawer}>
                 <TouchableOpacity style={estilos.containerBotaoDrawer}>
                     <Image source={drawerButton} style={estilos.drawerStyle} />
@@ -33,7 +42,7 @@ const Trilhas = ({ navigation }) => {
             </View >
 
             <View style={estilos.containerEmbreve}>
-                
+
                 <TouchableOpacity style={estilos.botaoEmbreve}>
                     <Text style={estilos.textoBotaoEmbreve}>Em breve</Text>
                     <View style={estilos.botaoFake}>
@@ -48,7 +57,7 @@ const Trilhas = ({ navigation }) => {
                     </View>
                 </TouchableOpacity>
             </View>
-            
+
 
         </SafeAreaView>
 
@@ -67,9 +76,20 @@ const estilos = StyleSheet.create({
         alignItems: 'center',
         marginTop: 100,
     },
+    containerTitulo: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        backgroundColor: '#073B4C',
+        position: 'absolute',
+        width: '70%',
+        left: -25,
+        borderRadius: 30,
+        paddingVertical: 15,
+    },
     containerDrawer: {
         position: 'absolute',
         zIndex: 1,
+        right: 20,
     },
     containerEmbreve: {
         alignItems: 'center',
@@ -82,7 +102,7 @@ const estilos = StyleSheet.create({
         alignItems: 'flex-start',
         position: 'absolute',
         top: -80,
-        left: -80,
+        right: -80,
     },
     botao: {
         backgroundColor: '#073B4C',
@@ -123,6 +143,11 @@ const estilos = StyleSheet.create({
     drawerStyle: {
         width: 40,
         height: 30,
+    },
+    arrowLeft: {
+        width: '13%',
+        height: '45%',
+        marginLeft: 50,
     },
     seta: {
         width: 20,

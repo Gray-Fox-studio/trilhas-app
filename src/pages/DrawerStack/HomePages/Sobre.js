@@ -4,12 +4,20 @@ import Bg from '../../../../assets/Screens/Background.png';
 import planet from '../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 import logo from '../../../../assets/Icons/conserva-bio.png';
+import ArrowL from '../../../../assets/Screens/ArrowL.png';
 
 const Sobre = ({ navigation }) => {
     return (
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
+
+            <TouchableOpacity style={estilos.containerTitulo}
+                onPress={() => navigation.navigate('Temp')}
+            >
+                <Image source={ArrowL} style={estilos.arrowLeft} />
+                <Text style={estilos.textoBotao}>Sobre</Text>
+            </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
                 <TouchableOpacity style={estilos.containerBotaoDrawer}>
@@ -19,10 +27,6 @@ const Sobre = ({ navigation }) => {
 
             <View style={estilos.containerPlaneta}>
                 <Image source={planet} style={estilos.planetaStyle} />
-            </View>
-
-            <View style={estilos.containerTitulo}>
-                <Text style={estilos.textTitulo}>Sobre</Text>
             </View>
 
             <ScrollView>
@@ -81,31 +85,47 @@ const estilos = StyleSheet.create({
     },
     containerDrawer: {
         position: 'absolute',
-        zIndex: 2,
+        zIndex: 3,
+        right: 20,
+    },
+    containerTitulo: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        backgroundColor: '#073B4C',
+        position: 'absolute',
+        width: '70%',
+        left: -25,
+        borderRadius: 30,
+        paddingVertical: 15,
+        zIndex: 4,
     },
     containerPlaneta: {
         alignItems: 'flex-start',
         position: 'absolute',
-        zIndex: 1,
         top: -80,
-        left: -80,
+        right: -80,
+        zIndex: 2,
     },
     containerLogo: {
         alignItems: 'center',
-        marginTop: 30,
+        marginTop: 60,
     },
     containerH1: {
         marginTop: 30,
         marginBottom: 10,
         alignItems: 'center'
     },
-    containerTitulo: {
-        zIndex: 0,
-        backgroundColor: '#073B4C',
-        padding: 20,
-        marginRight: 120,
-        marginLeft: -20,
-        borderRadius: 30,
+    arrowLeft: {
+        width: '13%',
+        height: '45%',
+        marginLeft: 50,
+    },
+    textoBotao: {
+        color: '#FFFFFF',
+        textAlign: 'justify',
+        lineHeight: 22,
+        fontSize: 17,
+        marginLeft: 10,
     },
     containerH2: {
         marginLeft: 30,

@@ -8,12 +8,20 @@ import MapInfo from '../../../../../../assets/Icons/Map.png';
 import SetaVerde from '../../../../../../assets/Icons/SetaVerde.png';
 import Game from '../../../../../../assets/Icons/Game.png';
 import Info from '../../../../../../assets/Icons/Interroga.png';
+import ArrowL from '../../../../../../assets/Screens/ArrowL.png';
 
 const JardimBotanico = ({ navigation }) => {
     return (
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
+          
+            <TouchableOpacity style={estilos.containerTitulo}
+                onPress={() => navigation.navigate('Trilhas')}
+            >
+                <Image source={ArrowL} style={estilos.arrowLeft} />
+                <Text style={estilos.textoBotao}>Jardi Botânico</Text>
+            </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
                 <TouchableOpacity style={estilos.containerBotaoDrawer}>
@@ -23,10 +31,6 @@ const JardimBotanico = ({ navigation }) => {
 
             <View style={estilos.containerPlaneta}>
                 <Image source={planet} style={estilos.planetaStyle} />
-            </View>
-
-            <View style={estilos.containerTitulo}>
-                <Text style={estilos.textTitulo}>Jardim Botânico</Text>
             </View>
 
             <View style={estilos.containerImage}>
@@ -67,7 +71,7 @@ mos aqui!`}
 
                 <TouchableOpacity style={estilos.botao}>
                     <Image source={Game} style={estilos.iconStyleFixed} />
-                    <Text style={estilos.textbotao}>{`Jogo
+                    <Text style={estilos.textbotao}>{`Game
 `}
                     </Text>
                 </TouchableOpacity>
@@ -88,21 +92,36 @@ const estilos = StyleSheet.create({
     containerDrawer: {
         position: 'absolute',
         zIndex: 2,
+        right: 20,
     },
     containerPlaneta: {
         alignItems: 'flex-start',
         position: 'absolute',
-        zIndex: 1,
         top: -80,
-        left: -80,
+        right: -80,
     },
     containerTitulo: {
-        zIndex: 0,
+        alignItems: 'center',
+        flexDirection: 'row',
         backgroundColor: '#073B4C',
-        padding: 20,
-        marginRight: 120,
-        marginLeft: -20,
+        position: 'absolute',
+        width: '70%',
+        left: -25,
         borderRadius: 30,
+        paddingVertical: 15,
+        zIndex: 4,
+    },
+    arrowLeft: {
+        width: '13%',
+        height: '45%',
+        marginLeft: 50,
+    },
+    textoBotao: {
+        color: '#FFFFFF',
+        textAlign: 'justify',
+        lineHeight: 22,
+        fontSize: 17,
+        marginLeft: 10,
     },
     containerBotaoDrawer: {
         marginTop: 30,
@@ -110,7 +129,7 @@ const estilos = StyleSheet.create({
     },
     containerImage: {
         alignItems: 'center',
-        marginTop: 30,
+        marginTop: 120,
         marginHorizontal: 48,
     },
     containerBotao: {

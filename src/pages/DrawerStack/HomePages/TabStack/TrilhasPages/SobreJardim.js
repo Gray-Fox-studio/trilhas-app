@@ -4,6 +4,7 @@ import Bg from '../../../../../../assets/Screens/Background.png';
 import planet from '../../../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../../../assets/Icons/DrawerButton.png';
 import Botanica from '../../../../../../assets/images/Botanica.png';
+import ArrowL from '../../../../../../assets/Screens/ArrowL.png';
 
 const SobreJardim = ({ navigation }) => {
     return (
@@ -11,6 +12,13 @@ const SobreJardim = ({ navigation }) => {
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
+
+            <View style={estilos.place}></View>
+            <TouchableOpacity style={estilos.containerTitulo}
+                onPress={() => navigation.navigate('JardimBotanico')}>
+                <Image source={ArrowL} style={estilos.arrowLeft} />
+                <Text style={estilos.textoBotao}>Sobre o jardim</Text>
+            </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
                 <TouchableOpacity style={estilos.containerBotaoDrawer}>
@@ -22,15 +30,9 @@ const SobreJardim = ({ navigation }) => {
                 <Image source={planet} style={estilos.planetaStyle} />
             </View>
 
-            <View style={estilos.containerTitulo}>
-                <Text style={estilos.textTitulo}>Sobre o jardim</Text>
-            </View>
-
-            <View style={estilos.containerPlace}></View>
-
             <ScrollView>
 
-                <View style={estilos.containerImage}>
+                <View style={estilos.containerImageC}>
                     <View style={estilos.ImageBorder}>
                         <Image source={Botanica} style={estilos.imageStyle} />
                     </View>
@@ -54,7 +56,7 @@ const SobreJardim = ({ navigation }) => {
                     </Text>
                 </View>
 
-                <View style={estilos.containerImage}>
+                <View style={estilos.containerImageB}>
                     <View style={estilos.ImageBorder}>
                         <Image source={Botanica} style={estilos.imageStyle} />
                     </View>
@@ -77,37 +79,60 @@ const estilos = StyleSheet.create({
     containerDrawer: {
         position: 'absolute',
         zIndex: 3,
+        right: 20,
     },
     containerPlaneta: {
         alignItems: 'flex-start',
         position: 'absolute',
-        zIndex: 2,
         top: -80,
-        left: -80,
+        right: -80,
+        zIndex: 2,
     },
     containerTitulo: {
-        zIndex: 0,
-        backgroundColor: '#4D908E',
-        padding: 20,
-        marginRight: 70,
-        marginLeft: -20,
-        borderRadius: 30,
-    },
-    containerPlace: {
-        zIndex: 1,
-        paddingVertical: 32,
-        paddingHorizontal: 70,
+        alignItems: 'center',
+        flexDirection: 'row',
         backgroundColor: '#073B4C',
+        position: 'absolute',
+        width: '70%',
+        left: -25,
         borderRadius: 30,
-        position: 'absolute'
+        paddingVertical: 15,
+        zIndex: 4,
+    },
+    place: {
+        backgroundColor: '#577590',
+        width: '21%',
+        padding: 28,
+        borderRadius: 30,
+        position: 'absolute',
+        zIndex: 5,
+        left: -20,
+        opacity: 0.7,
+    },
+    arrowLeft: {
+        width: '13%',
+        height: '45%',
+        marginLeft: 50,
+    },
+    textoBotao: {
+        color: '#FFFFFF',
+        textAlign: 'justify',
+        lineHeight: 22,
+        fontSize: 17,
+        marginLeft: 10,
     },
     containerBotaoDrawer: {
         marginTop: 30,
         marginLeft: 20,
     },
-    containerImage: {
+    containerImageC: {
         alignItems: 'center',
-        marginTop: 30,
+        marginTop: 120,
+        marginHorizontal: 48,
+    },
+    containerImageB: {
+        alignItems: 'center',
+        marginTop: 20,
         marginHorizontal: 48,
     },
     containerH1: {
@@ -129,7 +154,7 @@ const estilos = StyleSheet.create({
         textAlign: 'justify'
     },
     br: {
-        marginTop: 40,
+        marginTop: 30,
     },
     ImageBorder: {
         backgroundColor: '#073B4C',

@@ -32,8 +32,9 @@ export default function DrawerRoutes() {
             screenOptions={{
                 headerShown: false,
                 drawerStyle: {
-                    backgroundColor: '#073B4C',
-                }
+                    backgroundColor: '#04252f',
+                },
+                drawerPosition: "right",
             }}
             drawerContent={(props) => <CustomDrawer {...props} />}
         >
@@ -67,7 +68,7 @@ const estilos = StyleSheet.create({
         height: 200,
         width: 200,
         top: -50,
-        left: -50,
+        right: -130,
     },
     textStyle: {
         color: '#FFFFFF',
