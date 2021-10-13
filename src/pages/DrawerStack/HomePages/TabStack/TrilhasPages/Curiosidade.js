@@ -13,9 +13,9 @@ const Curiosidades = ({ navigation }) => {
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
 
-            <View style={estilos.place}></View>
             <TouchableOpacity style={estilos.containerTitulo}
                 onPress={() => navigation.navigate('JardimBotanico')}>
+                <View style={estilos.place}></View>
                 <Image source={ArrowL} style={estilos.arrowLeft} />
                 <Text style={estilos.textoBotao}>Curiosidades</Text>
             </TouchableOpacity>
@@ -131,13 +131,11 @@ const estilos = StyleSheet.create({
     },
     place: {
         backgroundColor: '#577590',
-        width: '21%',
+        width: '30%',
         padding: 28,
         borderRadius: 30,
         position: 'absolute',
-        zIndex: 5,
-        left: -20,
-        opacity: 0.7,
+        left: 5,
     },
     arrowLeft: {
         width: '13%',

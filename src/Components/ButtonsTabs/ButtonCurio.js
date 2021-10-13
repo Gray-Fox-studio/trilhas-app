@@ -1,11 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import Icon from '../../../assets/Icons/Interroga.png';
+import Icon from '../../../assets/Icons/InterrogaBranco.png';
+import Icon2 from '../../../assets/Icons/Interroga.png';
 
-export default function ButtonCurio() {
+export default function ButtonCurio({ focused }) {
     return (
         <View style={estilos.container}>
-            <Image source={Icon} style={estilos.iconStyle} />
+            <Image source={focused ? Icon : Icon2} style={estilos.iconStyle} />
             <Text style={estilos.textoStyle}> Curiosidade </Text>
         </View>
     )

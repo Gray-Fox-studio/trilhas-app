@@ -1,12 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
-import Icon from '../../../assets/Icons/SetaVerde.png';
+import Icon from '../../../assets/Icons/SetaBranca.png';
+import Icon2 from '../../../assets/Icons/SetaVerde.png';
 
-export default function ButtonTrilhas() {
+export default function ButtonTrilhas({ focused }) {
     return (
         <View style={estilos.container}>
-            <View style={estilos.bordaicon}>
-                <Image source={Icon} style={estilos.iconStyle} />
+            <View style={estilos.bordaicon, { backgroundColor: focused ? '#90BE6D' : '#FFFFFF', padding: 20, borderRadius: 50, marginBottom: 15 }}>
+                <Image source={focused ? Icon : Icon2} style={estilos.iconStyle} />
             </View>
         </View>
     )
@@ -27,8 +28,6 @@ const estilos = StyleSheet.create({
         fontSize: 12,
     },
     bordaicon: {
-        backgroundColor: '#FFFFFF',
-        padding: 20,
         borderRadius: 50,
         marginBottom: 15,
     }

@@ -15,9 +15,8 @@ const JardimBotanico = ({ navigation }) => {
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
-          
+
             <TouchableOpacity style={estilos.containerTitulo}
-                onPress={() => navigation.navigate('Trilhas')}
             >
                 <Image source={ArrowL} style={estilos.arrowLeft} />
                 <Text style={estilos.textoBotao}>Jardi Botânico</Text>

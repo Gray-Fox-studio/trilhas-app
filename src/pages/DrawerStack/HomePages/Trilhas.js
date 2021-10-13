@@ -21,7 +21,9 @@ const Trilhas = ({ navigation }) => {
             </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
-                <TouchableOpacity style={estilos.containerBotaoDrawer}>
+                <TouchableOpacity style={estilos.containerBotaoDrawer}
+                    
+                >
                     <Image source={drawerButton} style={estilos.drawerStyle} />
                 </TouchableOpacity>
             </View>

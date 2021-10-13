@@ -12,9 +12,9 @@ const TrilhaVirtual = ({ navigation }) => {
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
 
-            <View style={estilos.place}></View>
             <TouchableOpacity style={estilos.containerTitulo}
                 onPress={() => navigation.navigate('JardimBotanico')}>
+                <View style={estilos.place}></View>
                 <Image source={ArrowL} style={estilos.arrowLeft} />
                 <Text style={estilos.textoBotao}>Trilha Virtual</Text>
             </TouchableOpacity>
@@ -70,13 +70,11 @@ const estilos = StyleSheet.create({
     },
     place: {
         backgroundColor: '#577590',
-        width: '21%',
+        width: '30%',
         padding: 28,
         borderRadius: 30,
         position: 'absolute',
-        zIndex: 5,
-        left: -20,
-        opacity: 0.7,
+        left: 5,
     },
     arrowLeft: {
         width: '13%',
@@ -143,7 +141,7 @@ const estilos = StyleSheet.create({
     backgroundStyle: {
         width: '100%',
         height: '100%',
-        position:'absolute',
+        position: 'absolute',
     },
     planetaStyle: {
         width: 200,

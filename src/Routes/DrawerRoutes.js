@@ -6,9 +6,12 @@ import Sobre from '../pages/DrawerStack/HomePages/Sobre';
 import Quiz from "../pages/DrawerStack/HomePages/Quiz";
 import Instituicao from "../pages/DrawerStack/HomePages/Instituicao";
 import planet from '../../assets/Icons/Planet.png';
+import Icon from '../../assets/Icons/Quitbranco.png';
+
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Drawer = createDrawerNavigator();
+
 
 const CustomDrawer = (props) => {
     return (
@@ -19,7 +22,8 @@ const CustomDrawer = (props) => {
             <DrawerItemList {...props} />
             <View style={estilos.containerButton}>
                 <TouchableOpacity style={estilos.buttonStyles}>
-                    <Text style={estilos.textStyle}>Log Out</Text>
+                    <Image source={Icon} style={estilos.IconQuit} />
+                    <Text style={estilos.textStyle}>Sair</Text>
                 </TouchableOpacity>
             </View>
         </DrawerContentScrollView>
@@ -38,8 +42,11 @@ export default function DrawerRoutes() {
             }}
             drawerContent={(props) => <CustomDrawer {...props} />}
         >
-            <Drawer.Screen name="Trilhas" component={Trilhas} options={{
-            }}
+            <Drawer.Screen name="Trilhas" component={Trilhas}
+                options={{
+                    drawerLabel: '',
+                }}
+
             />
             <Drawer.Screen name="Sobre" component={Sobre}
             />
@@ -56,13 +63,15 @@ const estilos = StyleSheet.create({
         flex: 1,
     },
     containerButton: {
-        alignItems: 'center'
+        alignItems: 'center',
     },
     buttonStyles: {
         backgroundColor: '#577590',
-        paddingHorizontal: 100,
-        paddingVertical: 10,
         borderRadius: 10,
+        width: 230,
+        height: 55,
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     ImageStyle: {
         height: 200,
@@ -70,7 +79,14 @@ const estilos = StyleSheet.create({
         top: -50,
         right: -130,
     },
+    IconQuit: {
+        width: 30,
+        height: 25,
+        marginLeft: 20,
+        marginRight: 20,
+    },
     textStyle: {
         color: '#FFFFFF',
+        fontSize: 17,
     }
 });

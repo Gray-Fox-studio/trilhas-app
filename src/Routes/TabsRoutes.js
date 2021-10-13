@@ -31,32 +31,32 @@ export default function TabsRoutes() {
             <Tab.Screen name="Sobre" component={SobreJardim}
                 options={{
                     tabBarLabel: '',
-                    tabBarIcon: () => (
-                        <ButtonSobre />
+                    tabBarIcon: ({ focused }) => (
+                        <ButtonSobre focused={focused} />
                     ),
                 }}
             />
             <Tab.Screen name="Curiosidade" component={Curiosidade}
                 options={{
                     tabBarLabel: '',
-                    tabBarIcon: () => (
-                        <ButtonCurio />
+                    tabBarIcon: ({ focused }) => (
+                        <ButtonCurio focused={focused} />
                     ),
                 }}
             />
             <Tab.Screen name="Game" component={Game}
                 options={{
                     tabBarLabel: '',
-                    tabBarIcon: () => (
-                        <ButtonGame />
+                    tabBarIcon: ({ focused }) => (
+                        <ButtonGame focused={focused} />
                     ),
                 }}
             />
             <Tab.Screen name="Trilha" component={TrilhaVirtual}
                 options={{
                     tabBarLabel: '',
-                    tabBarIcon: () => (
-                        <ButtonTrilhas />
+                    tabBarIcon: ({ focused }) => (
+                        <ButtonTrilhas focused={focused} />
                     ),
                 }}
             />

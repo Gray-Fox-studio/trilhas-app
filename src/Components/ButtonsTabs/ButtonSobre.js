@@ -1,11 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import Icon from '../../../assets/Icons/Map.png';
+import Icon from '../../../assets/Icons/mapBranco.png';
+import Icon2 from '../../../assets/Icons/Map.png';
 
-export default function ButtonSobre() {
+export default function ButtonSobre({ focused }) {
     return (
         <View style={estilos.container}>
-            <Image source={Icon} style={estilos.iconStyle} />
+            <Image source={ focused ? Icon : Icon2 } style={estilos.iconStyle} />
             <Text style={estilos.textoStyle}> Sobre </Text>
         </View>
     )
