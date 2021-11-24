@@ -1,19 +1,21 @@
 import React from "react";
 import { Text, StyleSheet, View, Image } from 'react-native';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from "@react-navigation/drawer";
-import Trilhas from '../pages/DrawerStack/HomePages/Trilhas';
-import Sobre from '../pages/DrawerStack/HomePages/Sobre';
-import Quiz from "../pages/DrawerStack/HomePages/Quiz";
-import Instituicao from "../pages/DrawerStack/HomePages/Instituicao";
-import planet from '../../assets/Icons/Planet.png';
-import Icon from '../../assets/Icons/Quitbranco.png';
+import Trilhas from '../../pages/DrawerStack/HomePages/Trilhas';
+import Sobre from '../../pages/DrawerStack/HomePages/Sobre';
+import Quiz from "../../pages/DrawerStack/HomePages/Quiz";
+import Instituicao from "../../pages/DrawerStack/HomePages/Instituicao";
+import planet from '../../../assets/Icons/Planet.png';
+import Icon from '../../../assets/Icons/Quitbranco.png';
+import ButtonSobre from "../../Components/ButtonsDrawer/ButtonSobre";
+import { DrawerActions } from "@react-navigation/native";
 
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Drawer = createDrawerNavigator();
 
 
-const CustomDrawer = (props) => {
+const CustomDrawer = (props, focused) => {
     return (
         <DrawerContentScrollView {...props}>
             <View style={estilos.container}>
@@ -21,7 +23,9 @@ const CustomDrawer = (props) => {
             </View>
             <DrawerItemList {...props} />
             <View style={estilos.containerButton}>
-                <TouchableOpacity style={estilos.buttonStyles}>
+                <TouchableOpacity style={estilos.buttonStyles}
+                    onPress={()=> props.navigation.dispatch(DrawerActions.closeDrawer)}  
+                >
                     <Image source={Icon} style={estilos.IconQuit} />
                     <Text style={estilos.textStyle}>Sair</Text>
                 </TouchableOpacity>
@@ -40,12 +44,12 @@ export default function DrawerRoutes() {
                 },
                 drawerPosition: "right",
             }}
-            initialRouteName="Sobre"
+            initialRouteName="Instituição"
             drawerContent={(props) => <CustomDrawer {...props} />}
         >
             <Drawer.Screen name="Trilhas" component={Trilhas}
                 options={{
-                    drawerLabel: '',
+                 
                 }}
 
             />

@@ -41,7 +41,7 @@ const JardimBotanico = ({ navigation }) => {
             <View style={estilos.containerBotao}>
 
                 <TouchableOpacity style={estilos.botao}
-                    onPress={() => navigation.navigate('Tabs')}
+                    onPress={() => navigation.navigate('TabStackJardim')}
                 >
 
                     <Image source={MapInfo} style={estilos.iconStyle} />
@@ -50,7 +50,9 @@ jardin`}
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={estilos.botao}>
+                <TouchableOpacity style={estilos.botao}
+                    onPress={() => navigation.navigate('TabStackTrilha')}
+                >
                     <Image source={SetaVerde} style={estilos.iconStyle} />
                     <Text style={estilos.textbotao}>{`Trilha
 Virtual`}
@@ -60,7 +62,9 @@ Virtual`}
 
             <View style={estilos.containerBotao}>
 
-                <TouchableOpacity style={estilos.botao}>
+                <TouchableOpacity style={estilos.botao}
+                    onPress={() => navigation.navigate('TabStackCuriosidade')}
+                >
 
                     <Image source={Info} style={estilos.iconStyle} />
                     <Text style={estilos.textbotao}>{`Encontra 
@@ -68,7 +72,9 @@ mos aqui!`}
                     </Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={estilos.botao}>
+                <TouchableOpacity style={estilos.botao}
+                    onPress={() => navigation.navigate('TabStackGame')}
+                >
                     <Image source={Game} style={estilos.iconStyleFixed} />
                     <Text style={estilos.textbotao}>{`Game
 `}

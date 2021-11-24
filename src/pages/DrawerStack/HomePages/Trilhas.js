@@ -7,8 +7,8 @@ import planet from '../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 import ArrowL from '../../../../assets/Screens/ArrowL.png'
 
-const Trilhas = ({ navigation }) => {
-    return (
+const Trilhas = ({ navigation}) => {
+    return (<>
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
@@ -22,7 +22,7 @@ const Trilhas = ({ navigation }) => {
 
             <View style={estilos.containerDrawer}>
                 <TouchableOpacity style={estilos.containerBotaoDrawer}
-                    
+              
                 >
                     <Image source={drawerButton} style={estilos.drawerStyle} />
                 </TouchableOpacity>
@@ -62,6 +62,7 @@ const Trilhas = ({ navigation }) => {
 
 
         </SafeAreaView>
+        </>
 
     );
 }

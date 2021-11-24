@@ -38,7 +38,7 @@ const StartScreen = ({ navigation }) => {
 
             <View style={estilos.containerBotaoSobre}>
                 <TouchableOpacity style={estilos.botaoSobre}
-                    onPress={() => navigation.navigate('Sobre')}
+                    onPress={() => navigation.navigate('DrawerSobre')}
                 >
                     <View style={estilos.row}>
                         <Image source={info} style={estilos.seta} />
@@ -50,7 +50,7 @@ const StartScreen = ({ navigation }) => {
 
             <View style={estilos.containerBotaoInst}>
                 <TouchableOpacity style={estilos.botaoInst}
-                    onPress={() => navigation.navigate('Instituição')}
+                    onPress={() => navigation.navigate('DrawerInst')}
                 >
                     <View style={estilos.row}>
                         <Image source={inst} style={estilos.setaInst} />
@@ -61,7 +61,7 @@ const StartScreen = ({ navigation }) => {
 
             <View style={estilos.containerBotaoQuiz}>
                 <TouchableOpacity style={estilos.botaoQuiz}
-                    onPress={() => navigation.navigate('Quiz')}
+                    onPress={() => navigation.navigate('DrawerQuiz')}
                 >
                     <View style={estilos.row}>
                         <Image source={game} style={estilos.gameSeta} />

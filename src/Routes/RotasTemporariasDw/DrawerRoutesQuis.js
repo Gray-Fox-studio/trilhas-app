@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, StyleSheet, View, Image } from 'react-native';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from "@react-navigation/drawer";
-import Trilhas from '../pages/DrawerStack/HomePages/Trilhas';
-import Sobre from '../pages/DrawerStack/HomePages/Sobre';
-import Quiz from "../pages/DrawerStack/HomePages/Quiz";
-import Instituicao from "../pages/DrawerStack/HomePages/Instituicao";
-import planet from '../../assets/Icons/Planet.png';
-import Icon from '../../assets/Icons/Quitbranco.png';
+import Trilhas from '../../pages/DrawerStack/HomePages/Trilhas';
+import Sobre from '../../pages/DrawerStack/HomePages/Sobre';
+import Quiz from "../../pages/DrawerStack/HomePages/Quiz";
+import Instituicao from "../../pages/DrawerStack/HomePages/Instituicao";
+import planet from '../../../assets/Icons/Planet.png';
+import Icon from '../../../assets/Icons/Quitbranco.png';
 
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -40,7 +40,7 @@ export default function DrawerRoutes() {
                 },
                 drawerPosition: "right",
             }}
-            initialRouteName="Sobre"
+            initialRouteName="Quiz"
             drawerContent={(props) => <CustomDrawer {...props} />}
         >
             <Drawer.Screen name="Trilhas" component={Trilhas}

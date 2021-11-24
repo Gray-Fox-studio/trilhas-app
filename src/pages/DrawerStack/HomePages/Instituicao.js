@@ -5,10 +5,11 @@ import planet from '../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 import logo from '../../../../assets/Icons/IFPB.png';
 import ArrowL from '../../../../assets/Screens/ArrowL.png';
+import { DrawerActions } from '@react-navigation/routers';
 
-const Instituicao = ({ navigation }) => {
+const Instituicao = ({ navigation, props }) => {
     return (
-        <SafeAreaView style={estilos.container}>
+        <SafeAreaView style={estilos.container} {...props}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <Image source={Bg} style={estilos.backgroundStyle} />
 
@@ -16,11 +17,13 @@ const Instituicao = ({ navigation }) => {
                 onPress={() => navigation.navigate('Temp')}
             >
                 <Image source={ArrowL} style={estilos.arrowLeft} />
-                <Text style={estilos.textoBotao}>Trilhas</Text>
+                <Text style={estilos.textoBotao}>Instituição</Text>
             </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
-                <TouchableOpacity style={estilos.containerBotaoDrawer}>
+                <TouchableOpacity style={estilos.containerBotaoDrawer}
+                    //onPress={()=> props.navigation.dispatch(DrawerActions.openDrawer)} 
+                >
                     <Image source={drawerButton} style={estilos.drawerStyle} />
                 </TouchableOpacity>
             </View>
