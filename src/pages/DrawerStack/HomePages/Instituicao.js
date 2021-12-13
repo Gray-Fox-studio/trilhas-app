@@ -5,7 +5,7 @@ import planet from '../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 import logo from '../../../../assets/Icons/IFPB.png';
 import ArrowL from '../../../../assets/Screens/ArrowL.png';
-import { DrawerActions } from '@react-navigation/routers';
+import { DrawerActions } from '@react-navigation/native';
 
 const Instituicao = ({ navigation, props }) => {
     return (
@@ -22,7 +22,7 @@ const Instituicao = ({ navigation, props }) => {
 
             <View style={estilos.containerDrawer}>
                 <TouchableOpacity style={estilos.containerBotaoDrawer}
-                    //onPress={()=> props.navigation.dispatch(DrawerActions.openDrawer)} 
+                  onPress={(props) => navigation.dispatch(DrawerActions.openDrawer())} 
                 >
                     <Image source={drawerButton} style={estilos.drawerStyle} />
                 </TouchableOpacity>

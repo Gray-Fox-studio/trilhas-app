@@ -6,8 +6,10 @@ import botanica from '../../../../assets/images/Botanica.png';
 import planet from '../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 import ArrowL from '../../../../assets/Screens/ArrowL.png'
+import { DrawerActions } from '@react-navigation/native';
 
-const Trilhas = ({ navigation}) => {
+
+const Trilhas = ({ navigation, props }) => {
     return (<>
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
@@ -22,7 +24,7 @@ const Trilhas = ({ navigation}) => {
 
             <View style={estilos.containerDrawer}>
                 <TouchableOpacity style={estilos.containerBotaoDrawer}
-              
+                    onPress={(props) => navigation.dispatch(DrawerActions.openDrawer())}
                 >
                     <Image source={drawerButton} style={estilos.drawerStyle} />
                 </TouchableOpacity>
@@ -62,7 +64,7 @@ const Trilhas = ({ navigation}) => {
 
 
         </SafeAreaView>
-        </>
+    </>
 
     );
 }

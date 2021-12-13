@@ -13,7 +13,8 @@ const CustomDrawer = (props) => {
                 <DrawerItemList  {...props} />
             </DrawerContentScrollView>
             <View style={{ padding: 20,}}>
-                <TouchableOpacity style={estilos.buttonStyles}>
+                <TouchableOpacity style={estilos.buttonStyles}
+                >
                     <Image source={Icon} style={estilos.IconQuit} />
                     <Text style={estilos.textStyle}>Sair</Text>
                 </TouchableOpacity>

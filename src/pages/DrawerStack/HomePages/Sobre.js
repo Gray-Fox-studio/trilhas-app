@@ -5,8 +5,9 @@ import planet from '../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 import logo from '../../../../assets/Icons/conserva-bio.png';
 import ArrowL from '../../../../assets/Screens/ArrowL.png';
+import { DrawerActions } from '@react-navigation/native';
 
-const Sobre = ({ navigation }) => {
+const Sobre = ({ navigation, props }) => {
     return (
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
@@ -20,7 +21,9 @@ const Sobre = ({ navigation }) => {
             </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
-                <TouchableOpacity style={estilos.containerBotaoDrawer}>
+                <TouchableOpacity style={estilos.containerBotaoDrawer}
+                    onPress={(props) => navigation.dispatch(DrawerActions.openDrawer())}
+                >
                     <Image source={drawerButton} style={estilos.drawerStyle} />
                 </TouchableOpacity>
             </View>

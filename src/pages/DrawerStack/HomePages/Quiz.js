@@ -6,8 +6,9 @@ import drawerButton from '../../../../assets/Icons/DrawerButton.png';
 import ArrowL from '../../../../assets/Screens/ArrowL.png';
 import GameImage from '../../../../assets/images/GameImage.png';
 import Play from '../../../../assets/Icons/Play.png';
+import { DrawerActions } from '@react-navigation/native';
 
-const Quiz = ({ navigation }) => {
+const Quiz = ({ navigation, props }) => {
     return (
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
@@ -21,7 +22,9 @@ const Quiz = ({ navigation }) => {
             </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
-                <TouchableOpacity style={estilos.containerBotaoDrawer}>
+                <TouchableOpacity style={estilos.containerBotaoDrawer}
+                    onPress={(props) => navigation.dispatch(DrawerActions.openDrawer())}
+                >
                     <Image source={drawerButton} style={estilos.drawerStyle} />
                 </TouchableOpacity>
             </View>
@@ -113,7 +116,7 @@ const estilos = StyleSheet.create({
         borderRadius: 15,
     },
     imageStyle: {
-        width: 300,
+        width: '90%',
         height: 100,
         borderRadius: 10,
     },

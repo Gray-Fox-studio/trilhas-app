@@ -24,7 +24,7 @@ const DrawerRoutesTrilhas = () => {
                 drawerActiveTintColor: '#fff',
                 drawerInactiveTintColor: '#fff',
             }}
-            drawerContent={props => <CustomDrawer {...props} />}
+            drawerContent={props => <CustomDrawer {...props} /> }
             initialRouteName="Trilhas"
         >
             <Drawer.Screen name="Trilhas" component={Trilhas} />
