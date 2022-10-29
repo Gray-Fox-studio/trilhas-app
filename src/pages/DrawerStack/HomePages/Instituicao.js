@@ -43,16 +43,7 @@ const Instituicao = ({ navigation, props }) => {
 
                 <View style={estilos.containerH2}>
                     <Text style={estilos.h2}>
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum
-                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                    </Text>
+                    Olá! Somos uma equipe formada por um discente e duas docentes do IFPB - Campus Cabedelo e o Conserva Bio é um projeto fomentado pela chamada Interconecta nº 02/2021 e sua aplicação é apresentada em um Trabalho de Conclusão de Curso.                    </Text>
                 </View>
 
                 <View style={estilos.containerH1}>
@@ -61,15 +52,7 @@ const Instituicao = ({ navigation, props }) => {
 
                 <View style={estilos.containerH2}>
                     <Text style={estilos.h2}>
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum
-                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                    Nossa equipe é composta por Brian Marinho, estudante de Licenciatura em Ciências Biológicas no IFPB Campus Cabedelo, como também pelas docentes da mesma instituição, Jamylle Rebouças e Maiara Melo. Além disso, contamos com Yusef Richard como programador do Aplicativo. 
                     </Text>
                 </View>
 

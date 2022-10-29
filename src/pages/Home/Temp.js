@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleSheet, ImageBackground } from 'react-native';
 import Bg from '../../../assets/Screens/Background.png';
-import botanica from '../../../assets/images/Botanica.png';
+import botanica from '../../../assets/images/nove.jpg';
+import gameImage from '../../../assets/images/GameImage.png';
 import setaVerde from '../../../assets/Icons/SetaVerde.png';
 import info from '../../../assets/Icons/info.png';
 import inst from '../../../assets/Icons/Inst.png';
@@ -26,7 +27,7 @@ const StartScreen = ({ navigation }) => {
                 >
                     <View style={estilos.row}>
                         <Image source={setaVerde} style={estilos.seta} />
-                        <Text style={estilos.textoBotao}>Trilhas</Text>
+                        <Text style={estilos.textoBotao}>Explorar</Text>
                     </View>
                     <Image source={botanica} style={estilos.imageStyle} />
                 </TouchableOpacity>
@@ -65,9 +66,9 @@ const StartScreen = ({ navigation }) => {
                 >
                     <View style={estilos.row}>
                         <Image source={game} style={estilos.gameSeta} />
-                        <Text style={estilos.textoBotao}>Quis</Text>
+                        <Text style={estilos.textoBotao}>Bio Games</Text>
                     </View>
-                    <Image source={botanica} style={estilos.imageStyleQuiz} />
+                    <Image source={gameImage} style={estilos.imageStyleQuiz} />
                 </TouchableOpacity>
             </View >
             <View style={estilos.containerQuit}>

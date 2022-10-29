@@ -19,7 +19,7 @@ const Trilhas = ({ navigation, props }) => {
                 onPress={() => navigation.navigate('Temp')}
             >
                 <Image source={ArrowL} style={estilos.arrowLeft} />
-                <Text style={estilos.textoBotao}>Trilhas</Text>
+                <Text style={estilos.textoBotao}>Explorar</Text>
             </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>

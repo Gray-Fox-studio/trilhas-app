@@ -4,6 +4,15 @@ import Bg from '../../../../../../assets/Screens/Background.png';
 import planet from '../../../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../../../assets/Icons/DrawerButton.png';
 import Botanica from '../../../../../../assets/images/Botanica.png';
+import Imagem_26 from '../../../../../../assets/images/Imagem_26.jpg';
+import Imagem_27 from '../../../../../../assets/images/Imagem_27.jpg';
+import Imagem_28 from '../../../../../../assets/images/Imagem_28.jpg';
+import Imagem_29 from '../../../../../../assets/images/Imagem_29.jpg';
+import Imagem_30 from '../../../../../../assets/images/Imagem_30.jpg';
+import Imagem_31 from '../../../../../../assets/images/Imagem_31.jpg';
+import Imagem_32 from '../../../../../../assets/images/Imagem_32.jpg';
+import Imagem_33 from '../../../../../../assets/images/Imagem_33.jpg';
+import Imagem_34 from '../../../../../../assets/images/Imagem_34.jpg';
 import ArrowL from '../../../../../../assets/Screens/ArrowL.png';
 
 const SobreJardim = ({ navigation }) => {
@@ -35,31 +44,59 @@ const SobreJardim = ({ navigation }) => {
 
                 <View style={estilos.containerImageC}>
                     <View style={estilos.ImageBorder}>
-                        <Image source={Botanica} style={estilos.imageStyle} />
+                        <Image source={Imagem_26} style={estilos.imageStyle} />
                     </View>
                 </View>
 
                 <View style={estilos.containerH1}>
-                    <Text style={estilos.h1}>Lorem Ipsum</Text>
+                    <Text style={estilos.h1}>Sobre o Jardim</Text>
                 </View>
 
                 <View style={estilos.containerH2}>
                     <Text style={estilos.h2}>
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum
-                        Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum
-                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem
-                        Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                    O Jardim Botânico Benjamin Maranhão (JBBM) é uma Unidade de Conservação do tipo “Refúgio da Vida Silvestre" que está localizado na Avenida Dom Pedro II, Bairro da Torre, João Pessoa-PB. Antes conhecido como Mata do Buraquinho, é considerado um dos maiores remanescentes de Mata Atlântica natural em área urbana do Brasil.
+      A área possui cerca de 515 ha, dos quais 343 ha abrigam o Jardim Botânico, em que  a flora nativa e exótica, revela-se sem timidez nas atividades recreativas e educativas promovidas no local. O JBBM é administrado pela Superintendência de Administração do Meio Ambiente (SUDEMA). 
                     </Text>
                 </View>
 
                 <View style={estilos.containerImageB}>
                     <View style={estilos.ImageBorder}>
-                        <Image source={Botanica} style={estilos.imageStyle} />
+                        <Image source={Imagem_27} style={estilos.imageStyle} />
+                    </View>
+                </View>
+                <View style={estilos.containerImageB}>
+                    <View style={estilos.ImageBorder}>
+                        <Image source={Imagem_28} style={estilos.imageStyle} />
+                    </View>
+                </View>
+                <View style={estilos.containerImageB}>
+                    <View style={estilos.ImageBorder}>
+                        <Image source={Imagem_29} style={estilos.imageStyle} />
+                    </View>
+                </View>
+                <View style={estilos.containerImageB}>
+                    <View style={estilos.ImageBorder}>
+                        <Image source={Imagem_30} style={estilos.imageStyle} />
+                    </View>
+                </View>
+                <View style={estilos.containerImageB}>
+                    <View style={estilos.ImageBorder}>
+                        <Image source={Imagem_31} style={estilos.imageStyle} />
+                    </View>
+                </View>
+                <View style={estilos.containerImageB}>
+                    <View style={estilos.ImageBorder}>
+                        <Image source={Imagem_32} style={estilos.imageStyle} />
+                    </View>
+                </View>
+                <View style={estilos.containerImageB}>
+                    <View style={estilos.ImageBorder}>
+                        <Image source={Imagem_33} style={estilos.imageStyle} />
+                    </View>
+                </View>
+                <View style={estilos.containerImageB}>
+                    <View style={estilos.ImageBorder}>
+                        <Image source={Imagem_34} style={estilos.imageStyle} />
                     </View>
                 </View>
 

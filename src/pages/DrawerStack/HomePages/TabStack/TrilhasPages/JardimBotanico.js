@@ -4,6 +4,7 @@ import Bg from '../../../../../../assets/Screens/Background.png';
 import planet from '../../../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../../../assets/Icons/DrawerButton.png';
 import Botanica from '../../../../../../assets/images/Botanica.png';
+import vinteCinco from '../../../../../../assets/images/25_2.jpg';
 import MapInfo from '../../../../../../assets/Icons/Map.png';
 import SetaVerde from '../../../../../../assets/Icons/SetaVerde.png';
 import Game from '../../../../../../assets/Icons/Game.png';
@@ -34,7 +35,7 @@ const JardimBotanico = ({ navigation }) => {
 
             <View style={estilos.containerImage}>
                 <View style={estilos.ImageBorder}>
-                    <Image source={Botanica} style={estilos.imageStyle} />
+                    <Image source={vinteCinco} style={estilos.imageStyle} />
                 </View>
             </View>
 
@@ -54,8 +55,8 @@ jardin`}
                     onPress={() => navigation.navigate('TabStackTrilha')}
                 >
                     <Image source={SetaVerde} style={estilos.iconStyle} />
-                    <Text style={estilos.textbotao}>{`Trilha
-Virtual`}
+                    <Text style={estilos.textbotao}>{`Galeria
+                    `}
                     </Text>
                 </TouchableOpacity>
             </View>
