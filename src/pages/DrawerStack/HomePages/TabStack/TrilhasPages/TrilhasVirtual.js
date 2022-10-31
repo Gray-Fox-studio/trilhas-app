@@ -1,22 +1,27 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleSheet, ScrollView } from 'react-native';
-import Bg from '../../../../../../assets/Screens/TrilhaVirtualScreen.png';
+import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleSheet, ScrollView, Button } from 'react-native';
+// import Bg from '../../../../../../assets/Screens/TrilhaVirtualScreen.png';
+import Gallery from '../../../../../Components/Gallery';
 import planet from '../../../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../../../assets/Icons/DrawerButton.png';
 import ArrowL from '../../../../../../assets/Screens/ArrowL.png';
 
 const TrilhaVirtual = ({ navigation }) => {
+
     return (
 
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
-            <Image source={Bg} style={estilos.backgroundStyle} />
+            <View style={estilos.backgroundStyle}>
+                <Gallery />
+            </View>
 
             <TouchableOpacity style={estilos.containerTitulo}
                 onPress={() => navigation.navigate('JardimBotanico')}>
                 <View style={estilos.place}></View>
                 <Image source={ArrowL} style={estilos.arrowLeft} />
-                <Text style={estilos.textoBotao}>Trilha Virtual</Text>
+                <Text style={estilos.textoBotao}>Galeria 
+                </Text>
             </TouchableOpacity>
 
             <View style={estilos.containerDrawer}>
@@ -141,8 +146,15 @@ const estilos = StyleSheet.create({
     backgroundStyle: {
         width: '100%',
         height: '100%',
-        position: 'absolute',
     },
+    backgroundImage: {
+        width: '100%',
+        height: '100%',
+    },
+    textDescription: {
+        color: '#fff',
+        textAlign: 'center',
+    }, 
     planetaStyle: {
         width: 200,
         height: 200,
