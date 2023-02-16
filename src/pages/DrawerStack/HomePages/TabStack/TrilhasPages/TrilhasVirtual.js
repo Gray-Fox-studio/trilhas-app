@@ -1,26 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, StatusBar, Image, SafeAreaView, StyleSheet, ScrollView, Button } from 'react-native';
 // import Bg from '../../../../../../assets/Screens/TrilhaVirtualScreen.png';
 import Gallery from '../../../../../Components/Gallery';
 import planet from '../../../../../../assets/Icons/Planet.png';
 import drawerButton from '../../../../../../assets/Icons/DrawerButton.png';
 import ArrowL from '../../../../../../assets/Screens/ArrowL.png';
+// import AppIntroSlider from 'react-native-app-intro-slider';
 
 const TrilhaVirtual = ({ navigation }) => {
+
+    const [modal, setModal] = useState(false);
 
     return (
 
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <View style={estilos.backgroundStyle}>
+                {modal === false ? <Text>Modal fake</Text> : <Text>Modal On</Text>}
                 <Gallery />
+                {/* <AppIntroSlider
+                    renderItem={galeryRender}
+                    activeDotStyle={{
+                        backgroundColor: '#90BE6D',
+                        width: '100%'
+                    }}
+                    renderNextButton={() => { null }}
+                    renderDoneButton={() => { null }}
+                /> */}
             </View>
 
             <TouchableOpacity style={estilos.containerTitulo}
                 onPress={() => navigation.navigate('JardimBotanico')}>
                 <View style={estilos.place}></View>
                 <Image source={ArrowL} style={estilos.arrowLeft} />
-                <Text style={estilos.textoBotao}>Galeria 
+                <Text style={estilos.textoBotao}>Galeria
                 </Text>
             </TouchableOpacity>
 
@@ -154,7 +167,7 @@ const estilos = StyleSheet.create({
     textDescription: {
         color: '#fff',
         textAlign: 'center',
-    }, 
+    },
     planetaStyle: {
         width: 200,
         height: 200,
