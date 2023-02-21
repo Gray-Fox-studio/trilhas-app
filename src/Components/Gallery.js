@@ -39,7 +39,7 @@ const Gallery = () => {
               <Ionicons name="ios-close-circle" size={50} color="white" />
             </TouchableOpacity>
             {/* //Legacy */}
-            
+
             <ReactNativeZoomableView
               maxZoom={2}
               minZoom={0.5}
@@ -53,8 +53,8 @@ const Gallery = () => {
                 resizeMode="contain"
                 source={ImageRepost[image]}
               />
-            </ReactNativeZoomableView> 
-           
+            </ReactNativeZoomableView>
+
           </View>
       }
       <View>
@@ -71,7 +71,9 @@ const Gallery = () => {
                         source={ImageRepost[items.images]}
                       />
                     </TouchableOpacity>
-                    <Text key={index.description} style={{ fontSize: 20, position: 'absolute', color: '#fff', bottom: '20%', backgroundColor: '#000', textAlign: 'center', width: '100%' }}>
+                    <Text key={index.description}
+                      style={{ fontSize: 20, position: 'absolute', color: '#fff', bottom: '20%', backgroundColor: '#000', textAlign: 'center', width: '100%' }}
+                    >
                       {items.description}
                     </Text>
                   </View>

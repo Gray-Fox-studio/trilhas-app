@@ -9,14 +9,11 @@ import ArrowL from '../../../../../../assets/Screens/ArrowL.png';
 
 const TrilhaVirtual = ({ navigation }) => {
 
-    const [modal, setModal] = useState(false);
-
     return (
 
         <SafeAreaView style={estilos.container}>
             <StatusBar backgroundColor={'#90BE6D'} />
             <View style={estilos.backgroundStyle}>
-                {modal === false ? <Text>Modal fake</Text> : <Text>Modal On</Text>}
                 <Gallery />
                 {/* <AppIntroSlider
                     renderItem={galeryRender}
